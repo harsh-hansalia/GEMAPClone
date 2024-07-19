@@ -52,6 +52,7 @@ END_MESSAGE_MAP()
 
 CGEMAPCloneDlg::CGEMAPCloneDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_GEMAPCLONE_DIALOG, pParent)
+	, m_coms(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -59,6 +60,7 @@ CGEMAPCloneDlg::CGEMAPCloneDlg(CWnd* pParent /*=nullptr*/)
 void CGEMAPCloneDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_COMS, m_coms);
 }
 
 BEGIN_MESSAGE_MAP(CGEMAPCloneDlg, CDialogEx)
